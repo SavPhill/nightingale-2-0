@@ -31,10 +31,10 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 			if ( ! have_comments() ) {
-				esc_html_e( 'Leave a comment', 'nightingale' );
+				esc_html_e( 'Leave a comment', NHSUK_DOMAIN_NAME );
 			} elseif ( '1' === $comments_number ) {
 				/* translators: %s: post title */
-				printf( esc_html_x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'nightingale' ), esc_html( get_the_title() ) );
+				printf( esc_html_x( 'One reply on &ldquo;%s&rdquo;', 'comments title', NHSUK_DOMAIN_NAME ), esc_html( get_the_title() ) );
 			} else {
 				echo sprintf(
 					esc_html(
@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 							'%1$s replies on &ldquo;%2$s&rdquo;',
 							$comments_number,
 							'comments title',
-							'nightingale'
+							NHSUK_DOMAIN_NAME
 						)
 					),
 					esc_html( number_format_i18n( $comments_number ) ),
@@ -67,7 +67,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'nightingale' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', NHSUK_DOMAIN_NAME ); ?></p>
 			<?php
 		endif;
 
@@ -75,7 +75,7 @@ if ( post_password_required() ) {
 
 	// Customized strings for the comment form.
 	$commentform_args = [
-		'title_reply' => __( 'Leave a Comment', 'nightingale' ),
+		'title_reply' => __( 'Leave a Comment', NHSUK_DOMAIN_NAME ),
 	];
 	comment_form( $commentform_args );
 	?>

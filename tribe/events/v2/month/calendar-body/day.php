@@ -61,7 +61,7 @@ $events_label_plural   = tribe_get_event_label_plural_lowercase();
 $found_events          = $day['found_events'];
 $num_events_label      = sprintf(
 	/* translators: %1$s: number of events, %2$s: event (singular), %3$s: events (plural). */
-	_n( '%1$s %2$s', '%1$s %3$s', $found_events, 'nightingale' ), // phpcs:ignore WordPress.WP.I18n.MismatchedPlaceholders
+	_n( '%1$s %2$s', '%1$s %3$s', $found_events, NHSUK_DOMAIN_NAME ), // phpcs:ignore WordPress.WP.I18n.MismatchedPlaceholders
 	number_format_i18n( $day['found_events'] ),
 	$events_label_singular,
 	$events_label_plural
@@ -99,7 +99,7 @@ $num_events_label      = sprintf(
 		<?php if ( ! empty( $day['featured_events'] ) ) : ?>
 			<?php
 			/* translators: %s: Events (plural). */
-			$has_featured_events_label = sprintf( __( 'Has featured %s', 'nightingale' ), $events_label_plural );
+			$has_featured_events_label = sprintf( __( 'Has featured %s', NHSUK_DOMAIN_NAME ), $events_label_plural );
 			?>
 			<em
 					class="tribe-events-calendar-month__mobile-events-icon tribe-events-calendar-month__mobile-events-icon--featured"
@@ -110,7 +110,7 @@ $num_events_label      = sprintf(
 		<?php elseif ( ! empty( $day['found_events'] ) ) : ?>
 			<?php
 			/* translators: %s: Events (plural). */
-			$has_events_label = sprintf( __( 'Has %s', 'nightingale' ), $events_label_plural );
+			$has_events_label = sprintf( __( 'Has %s', NHSUK_DOMAIN_NAME ), $events_label_plural );
 			?>
 			<em
 					class="tribe-events-calendar-month__mobile-events-icon tribe-events-calendar-month__mobile-events-icon--event"

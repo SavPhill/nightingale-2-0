@@ -86,7 +86,7 @@ if ( ( isset( $pager_results ) ) && ( ! empty( $pager_results ) ) ) {
 			<?php if ( ( isset( $href_query_arg ) ) && ( ! empty( $href_query_arg ) ) ) { ?>
 				href="<?php echo esc_html( add_query_arg( $href_query_arg, $href_val_prefix . 1 ) ); ?>"
 			<?php } ?>
-			data-paged="<?php echo esc_attr( $href_val_prefix ); ?>1" class="nhsuk-tag nhsuk-tag--white <?php echo esc_attr( $pager_left_class ); ?>" <?php echo esc_attr( $pager_left_disabled ); ?> title="<?php esc_attr_e( 'First Page', 'nightingale' ); ?>">
+			data-paged="<?php echo esc_attr( $href_val_prefix ); ?>1" class="nhsuk-tag nhsuk-tag--white <?php echo esc_attr( $pager_left_class ); ?>" <?php echo esc_attr( $pager_left_disabled ); ?> title="<?php esc_attr_e( 'First Page', NHSUK_DOMAIN_NAME ); ?>">
 			&laquo;
 			<span class="nhsuk-u-visually-hidden" aria-hidden="true">First Page</span>
 			</a>
@@ -111,7 +111,7 @@ if ( ( isset( $pager_results ) ) && ( ! empty( $pager_results ) ) ) {
 			<?php if ( ( isset( $href_query_arg ) ) && ( ! empty( $href_query_arg ) ) ) { ?>
 				href="<?php echo esc_attr( $linkit ); ?>"
 			<?php } ?>
-				data-paged="<?php echo esc_attr( $href_val_prefix . $count ); ?>" class="nhsuk-tag <?php echo esc_attr( $pager_colour ); ?>" <?php echo esc_attr( $pager_disabled ); ?> aria-label="<?php esc_attr_e( 'Go to Page ', 'nightingale' ) . esc_attr( $count ); ?>">
+				data-paged="<?php echo esc_attr( $href_val_prefix . $count ); ?>" class="nhsuk-tag <?php echo esc_attr( $pager_colour ); ?>" <?php echo esc_attr( $pager_disabled ); ?> aria-label="<?php esc_attr_e( 'Go to Page ', NHSUK_DOMAIN_NAME ) . esc_attr( $count ); ?>">
 					<span class="nhsuk-u-visually-hidden" aria-hidden="true"><?php esc_html( $reader_alt ); ?></span>
 					<?php echo esc_html( $count ); ?>
 				</a>
@@ -123,7 +123,7 @@ if ( ( isset( $pager_results ) ) && ( ! empty( $pager_results ) ) ) {
 			<li>
 				<a <?php if ( ( isset( $href_query_arg ) ) && ( ! empty( $href_query_arg ) ) ) { ?>
 					href="<?php echo esc_attr( add_query_arg( $href_query_arg, $href_val_prefix . $pager_results['total_pages'] ) ); ?>"
-				<?php } ?> data-paged="<?php echo esc_attr( $href_val_prefix . $pager_results['total_pages'] ); ?>" class="nhsuk-tag nhsuk-tag--white <?php esc_html( $pager_right_class ); ?>" <?php echo esc_html( $pager_right_disabled ); ?> title="<?php esc_attr_e( 'Last Page', 'nightingale' ); ?>">
+				<?php } ?> data-paged="<?php echo esc_attr( $href_val_prefix . $pager_results['total_pages'] ); ?>" class="nhsuk-tag nhsuk-tag--white <?php esc_html( $pager_right_class ); ?>" <?php echo esc_html( $pager_right_disabled ); ?> title="<?php esc_attr_e( 'Last Page', NHSUK_DOMAIN_NAME ); ?>">
 				&raquo;
 				<span class="nhsuk-u-visually-hidden" aria-hidden="true">Last Page</span>
 				</a>

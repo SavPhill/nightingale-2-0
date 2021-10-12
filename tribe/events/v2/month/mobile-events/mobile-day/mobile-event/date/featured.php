@@ -24,10 +24,10 @@ if ( empty( $event->featured ) ) {
 ?>
 <em
 	class="tribe-events-calendar-month-mobile-events__mobile-event-datetime-featured-icon tribe-common-svgicon tribe-common-svgicon--featured"
-	aria-label="<?php esc_attr_e( 'Featured', 'nightingale' ); ?>"
-	title="<?php esc_attr_e( 'Featured', 'nightingale' ); ?>"
+	aria-label="<?php esc_attr_e( 'Featured', NHSUK_DOMAIN_NAME ); ?>"
+	title="<?php esc_attr_e( 'Featured', NHSUK_DOMAIN_NAME ); ?>"
 >
 </em>
 <span class="tribe-events-calendar-month-mobile-events__mobile-event-datetime-featured-text">
-	<?php esc_html_e( 'Featured', 'nightingale' ); ?>
+	<?php esc_html_e( 'Featured', NHSUK_DOMAIN_NAME ); ?>
 </span>

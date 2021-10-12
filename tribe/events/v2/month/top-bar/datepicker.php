@@ -32,8 +32,8 @@ $datepicker_date     = Dates::build_date_object( $selected_date_value )->format(
 			class="tribe-common-h3 tribe-common-h--alt tribe-events-c-top-bar__datepicker-button"
 			data-js="tribe-events-top-bar-datepicker-button"
 			type="button"
-			aria-label="<?php esc_attr_e( 'Click to toggle datepicker', 'nightingale' ); ?>"
-			title="<?php esc_attr_e( 'Click to toggle datepicker', 'nightingale' ); ?>"
+			aria-label="<?php esc_attr_e( 'Click to toggle datepicker', NHSUK_DOMAIN_NAME ); ?>"
+			title="<?php esc_attr_e( 'Click to toggle datepicker', NHSUK_DOMAIN_NAME ); ?>"
 	>
 		<time
 				datetime="<?php echo esc_attr( $the_date->format( 'Y-m' ) ); ?>"
@@ -51,7 +51,7 @@ $datepicker_date     = Dates::build_date_object( $selected_date_value )->format(
 			class="tribe-events-c-top-bar__datepicker-label tribe-common-a11y-visual-hide"
 			for="tribe-events-top-bar-date"
 	>
-		<?php esc_html_e( 'Select date.', 'nightingale' ); ?>
+		<?php esc_html_e( 'Select date.', NHSUK_DOMAIN_NAME ); ?>
 	</label>
 	<input
 			type="text"

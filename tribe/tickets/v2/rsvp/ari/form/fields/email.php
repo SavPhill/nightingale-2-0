@@ -32,7 +32,7 @@ $email = apply_filters( 'tribe_tickets_rsvp_form_email', '', $this );
 		class="nhsuk-label"
 		for="tribe-tickets-rsvp-email-<?php echo esc_attr( $rsvp->ID ); ?>"
 	>
-		<?php esc_html_e( 'Email', 'nightingale' ); ?><span class="screen-reader-text"><?php esc_html_e( 'required', 'nightingale' ); ?></span>
+		<?php esc_html_e( 'Email', NHSUK_DOMAIN_NAME ); ?><span class="screen-reader-text"><?php esc_html_e( 'required', NHSUK_DOMAIN_NAME ); ?></span>
 		<span class="tribe-required nhsuk-tag nhsuk-tag--yellow" aria-hidden="true" role="presentation">*</span>
 	</label>
 	<input
@@ -42,6 +42,6 @@ $email = apply_filters( 'tribe_tickets_rsvp_form_email', '', $this );
 		id="tribe-tickets-rsvp-email-<?php echo esc_attr( $rsvp->ID ); ?>"
 		value="<?php echo esc_attr( $email ); ?>"
 		required
-		placeholder="<?php esc_attr_e( 'your@email.com', 'nightingale' ); ?>"
+		placeholder="<?php esc_attr_e( 'your@email.com', NHSUK_DOMAIN_NAME ); ?>"
 	>
 </div>

@@ -88,8 +88,8 @@ if ( $the_query->have_posts() ) :
 		<ul class="nhsuk-list nhsuk-pagination__list">
 			<?php
 			$postsorder = get_query_var( $namespace . 'order' ) ? get_query_var( $namespace . 'order' ) : 'desc';
-			$newer      = __( 'View more recent posts', 'nightingale' );
-			$older      = __( 'View older posts', 'nightingale' );
+			$newer      = __( 'View more recent posts', NHSUK_DOMAIN_NAME );
+			$older      = __( 'View older posts', NHSUK_DOMAIN_NAME );
 			if ( 'desc' === $postsorder ) {
 				$prevtext = $newer;
 				$nexttext = $older;
@@ -106,7 +106,7 @@ if ( $the_query->have_posts() ) :
 				?>
 				<li class="nhsuk-pagination-item--previous">
 					<a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="<?php echo esc_html( previous_posts( false ) ); ?>">
-						<span class="nhsuk-pagination__title"><?php esc_html_e( 'Previous', 'nightingale' ); ?></span>
+						<span class="nhsuk-pagination__title"><?php esc_html_e( 'Previous', NHSUK_DOMAIN_NAME ); ?></span>
 						<span class="nhsuk-u-visually-hidden">:</span>
 						<span class="nhsuk-pagination__page"><?php echo esc_html( $prevtext ); ?></span>
 						<svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -123,7 +123,7 @@ if ( $the_query->have_posts() ) :
 				?>
 				<li class="nhsuk-pagination-item--next">
 					<a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="<?php echo esc_html( next_posts( $the_query->max_num_pages, false ) ); ?>">
-						<span class="nhsuk-pagination__title"><?php esc_html_e( 'Next', 'nightingale' ); ?></span>
+						<span class="nhsuk-pagination__title"><?php esc_html_e( 'Next', NHSUK_DOMAIN_NAME ); ?></span>
 						<span class="nhsuk-u-visually-hidden">:</span>
 						<span class="nhsuk-pagination__page"><?php echo esc_html( $nexttext ); ?></span>
 						<svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">

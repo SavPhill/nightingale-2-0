@@ -18,8 +18,8 @@
 <li class="tribe-events-c-top-bar__nav-list-item nhsuk-pagination-item--next">
 	<a
 			href="<?php echo esc_url( $next_url ); ?>"
-			aria-label="<?php esc_attr_e( 'Next month', 'nightingale' ); ?>"
-			title="<?php esc_attr_e( 'Next month', 'nightingale' ); ?>"
+			aria-label="<?php esc_attr_e( 'Next month', NHSUK_DOMAIN_NAME ); ?>"
+			title="<?php esc_attr_e( 'Next month', NHSUK_DOMAIN_NAME ); ?>"
 			data-js="tribe-events-view-link"
 			rel="next"
 	>

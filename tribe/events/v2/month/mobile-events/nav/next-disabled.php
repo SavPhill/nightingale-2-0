@@ -26,7 +26,7 @@
 				/* translators: %s: Name of current category */
 				__(
 					'Next month, %1$s',
-					'nightingale'
+					NHSUK_DOMAIN_NAME
 				),
 				$label
 			)
@@ -40,7 +40,7 @@
 				/* translators: %s: Name of current category */
 				__(
 					'Next month, %1$s',
-					'nightingale'
+					NHSUK_DOMAIN_NAME
 				),
 				$label
 			)

@@ -26,7 +26,7 @@
 function nightingale_tabbed_pages_metabox() {
 	add_meta_box(
 		'nightingale-tabbed-page-metabox',
-		__( 'Display Tabbed Navigation for this section?', 'nightingale' ),
+		__( 'Display Tabbed Navigation for this section?', NHSUK_DOMAIN_NAME ),
 		'nightingale_render_tabbed_pages',
 		'page',
 		'side',
@@ -53,7 +53,7 @@ function nightingale_render_tabbed_pages( $post ) {
 	$checked = 'on' === $sidebar ? true : false;
 	?>
 
-	<p><b><?php esc_html_e( 'Show this section as tabs?', 'nightingale' ); ?></b></p>
+	<p><b><?php esc_html_e( 'Show this section as tabs?', NHSUK_DOMAIN_NAME ); ?></b></p>
 	<p><i>This will show a tab navigation component at the top of this page. You will need to also toggle this to "on" for any sub pages to ensure consistency. If you have tabs set to active for multiple levels, the tab will show current
 			and parent level pages only.</i>. This is not designed for more than 10 pages to display, it will revert to a contents list style if you have more than 10 siblings active.</p>
 	<input type="radio" id="tab-on" name="tabPage" value="on"
@@ -63,7 +63,7 @@ function nightingale_render_tabbed_pages( $post ) {
 		endif;
 		?>
 	>
-	<label for="tab-on"><?php esc_html_e( 'On', 'nightingale' ); ?></label><br>
+	<label for="tab-on"><?php esc_html_e( 'On', NHSUK_DOMAIN_NAME ); ?></label><br>
 	<input type="radio" id="tab-off" name="tabPage" value=""
 		<?php
 		if ( ! $checked ) :
@@ -71,9 +71,9 @@ function nightingale_render_tabbed_pages( $post ) {
 		endif;
 		?>
 	>
-	<label for="tab-off"><?php esc_html_e( 'Off', 'nightingale' ); ?></label><br>
+	<label for="tab-off"><?php esc_html_e( 'Off', NHSUK_DOMAIN_NAME ); ?></label><br>
 	<br/>
-	<label for="tabName"><b><?php esc_html_e( 'Text to show in Tab for this page', 'nightingale' ); ?></b></label>
+	<label for="tabName"><b><?php esc_html_e( 'Text to show in Tab for this page', NHSUK_DOMAIN_NAME ); ?></b></label>
 	<p>If you leave this blank, the page name will be used. If your page name is too long and causing ugly tabs, you can use this text to show a shorter title.</p>
 	<?php
 	echo '<input name="tabName" id="tabName" value="' . esc_html( $tabname ) . '" />';

@@ -1,4 +1,6 @@
 <?php
+define('NHSUK_DOMAIN_NAME', 'nightingale');
+
 /**
  * Nightingale  functions and definitions
  *
@@ -28,7 +30,7 @@ require get_template_directory() . '/inc/sanitization-callbacks.php';
  * as indicating support for post thumbnails.
  */
 function nightingale_setup() {
-	load_theme_textdomain( 'nightingale' );
+	load_theme_textdomain( NHSUK_DOMAIN_NAME );
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -49,8 +51,8 @@ function nightingale_setup() {
 
 	// This theme uses wp_nav_menus() in two location.
 	$locations = array(
-		'main-menu'   => __( 'The menu to show at the top of your site (does not show child options, only top level navigation)', 'nightingale' ),
-		'footer-menu' => __( 'The footer navigation area - this is great for showing more detailed links and deeper navigation.', 'nightingale' ),
+		'main-menu'   => __( 'The menu to show at the top of your site (does not show child options, only top level navigation)', NHSUK_DOMAIN_NAME ),
+		'footer-menu' => __( 'The footer navigation area - this is great for showing more detailed links and deeper navigation.', NHSUK_DOMAIN_NAME ),
 	);
 	register_nav_menus( $locations );
 
@@ -141,7 +143,7 @@ function nightingale_setup() {
 		'nav_menus'  => array(
 			// Assign a menu to the "main-menu" location.
 			'main-menu'   => array(
-				'name'  => __( 'Main Menu', 'nightingale' ),
+				'name'  => __( 'Main Menu', NHSUK_DOMAIN_NAME ),
 				'items' => array(
 					'link_home',
 					// Note that the core "home" page is actually a link in case a static front page is not used.
@@ -150,7 +152,7 @@ function nightingale_setup() {
 			),
 			// Assign a menu to the "footer-menu" location.
 			'footer-menu' => array(
-				'name'  => __( 'Footer Links', 'nightingale' ),
+				'name'  => __( 'Footer Links', NHSUK_DOMAIN_NAME ),
 				'items' => array(
 					'link_home',
 					'page-blog',
@@ -194,9 +196,9 @@ add_action( 'after_setup_theme', 'nightingale_content_width', 0 );
 function nightingale_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'nightingale' ),
+			'name'          => esc_html__( 'Sidebar', NHSUK_DOMAIN_NAME ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Elements to show in the sidebar. Each widget will show as a panel. If empty you will have a blank right hand panel.', 'nightingale' ),
+			'description'   => esc_html__( 'Elements to show in the sidebar. Each widget will show as a panel. If empty you will have a blank right hand panel.', NHSUK_DOMAIN_NAME ),
 			'before_widget' => '<section id="%1$s" class="nhsuk-related-nav %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="nhsuk-related-nav__heading">',
@@ -205,9 +207,9 @@ function nightingale_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Post Sidebar', 'nightingale' ),
+			'name'          => esc_html__( 'Post Sidebar', NHSUK_DOMAIN_NAME ),
 			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Elements to show in the post sidebar. Each widget will show as a panel. If empty you will have a blank right hand panel.', 'nightingale' ),
+			'description'   => esc_html__( 'Elements to show in the post sidebar. Each widget will show as a panel. If empty you will have a blank right hand panel.', NHSUK_DOMAIN_NAME ),
 			'before_widget' => '<section id="%1$s" class="nhsuk-related-nav %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="nhsuk-related-nav__heading">',
@@ -216,9 +218,9 @@ function nightingale_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Region', 'nightingale' ),
+			'name'          => esc_html__( 'Footer Region', NHSUK_DOMAIN_NAME ),
 			'id'            => 'footer-region',
-			'description'   => esc_html__( 'Widgets to show in the footer zone. By default the footer will have a copyright notice and the footer menu (if configured) only.', 'nightingale' ),
+			'description'   => esc_html__( 'Widgets to show in the footer zone. By default the footer will have a copyright notice and the footer menu (if configured) only.', NHSUK_DOMAIN_NAME ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 		)
@@ -227,7 +229,7 @@ function nightingale_widgets_init() {
 		array(
 			'name'          => '404 Page',
 			'id'            => '404-error',
-			'description'   => esc_html__( 'Content for your 404 error page goes here.', 'nightingale' ),
+			'description'   => esc_html__( 'Content for your 404 error page goes here.', NHSUK_DOMAIN_NAME ),
 			'before_widget' => '<div id="%1$s" class="%2$s nhsuk-related-nav">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="nhsuk-related-nav__heading">',
@@ -295,7 +297,7 @@ function nightingale_register_required_plugins() {
 	 * Array of configuration settings. Amend each line as needed.
 	 */
 	$config = array(
-		'id'           => 'nightingale',
+		'id'           => NHSUK_DOMAIN_NAME,
 		// Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',
 		// Default absolute path to bundled plugins.
@@ -512,7 +514,7 @@ add_filter( 'the_author', 'nightingale_check_author', 9999, 1 );
  * @param string $error Original error message to be overwritten.
  */
 function nightingale_no_login_hints( $error ) {
-	return __( 'If your email has been found in our database you will receive a reset link', 'nightingale' );
+	return __( 'If your email has been found in our database you will receive a reset link', NHSUK_DOMAIN_NAME );
 }
 
 add_filter( 'login_errors', 'nightingale_no_login_hints' );

@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php
 		if ( $dlm_download->get_version()->has_version_number() ) {
 			// translators: State Version variant.
-			printf( esc_html_e( 'Version %s', 'nightingale' ), esc_html( $dlm_download->get_version()->get_version_number() ) );
+			printf( esc_html_e( 'Version %s', NHSUK_DOMAIN_NAME ), esc_html( $dlm_download->get_version()->get_version_number() ) );
 		}
 		?>
 		" href="
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 		" rel="nofollow">
 			<?php
-			esc_html_e( 'Download File', 'nightingale' );
+			esc_html_e( 'Download File', NHSUK_DOMAIN_NAME );
 			?>
 			<small><?php echo esc_html( $dlm_download->get_version()->get_filename() ); ?> &ndash; <?php echo esc_html( $dlm_download->get_version()->get_filesize_formatted() ); ?></small>
 		</a>
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				class="nhsuk-tag download-count">
 			<?php
 			// translators: Name the download.
-			printf( esc_html( _n( '%d download', '%d downloads', $dlm_download->get_download_count(), 'nightingale' ) ), esc_html( $dlm_download->get_download_count() ) );
+			printf( esc_html( _n( '%d download', '%d downloads', $dlm_download->get_download_count(), NHSUK_DOMAIN_NAME ) ), esc_html( $dlm_download->get_download_count() ) );
 			?>
 		</div>
 

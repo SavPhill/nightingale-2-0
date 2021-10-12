@@ -14,8 +14,8 @@
 	<a
 		href="<?php echo esc_url( $prev_url ); ?>"
 		class="tribe-common-c-btn-icon tribe-common-c-btn-icon--caret-left tribe-events-c-top-bar__nav-link tribe-events-c-top-bar__nav-link--prev"
-		aria-label="<?php esc_attr_e( 'Previous day', 'nightingale' ); ?>"
-		title="<?php esc_attr_e( 'Previous day', 'nightingale' ); ?>"
+		aria-label="<?php esc_attr_e( 'Previous day', NHSUK_DOMAIN_NAME ); ?>"
+		title="<?php esc_attr_e( 'Previous day', NHSUK_DOMAIN_NAME ); ?>"
 		data-js="tribe-events-view-link"
 	>
 	</a>

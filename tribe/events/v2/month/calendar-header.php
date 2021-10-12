@@ -20,7 +20,7 @@ global $wp_locale;
 		<?php
 		printf(
 			/* translators: %s: Name of current category */
-			esc_html__( 'Calendar of %s', 'nightingale' ),
+			esc_html__( 'Calendar of %s', NHSUK_DOMAIN_NAME ),
 			esc_html( tribe_get_event_label_plural() )
 		);
 		?>

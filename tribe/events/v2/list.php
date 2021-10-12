@@ -35,7 +35,7 @@ $sidebar = nightingale_show_sidebar();
 	<?php endforeach; ?>
 >
 
-		<?php $this->template( 'components/loader', [ 'text' => __( 'Loading...', 'nightingale' ) ] ); ?>
+		<?php $this->template( 'components/loader', [ 'text' => __( 'Loading...', NHSUK_DOMAIN_NAME ) ] ); ?>
 
 		<?php $this->template( 'components/data' ); ?>
 

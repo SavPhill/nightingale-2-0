@@ -26,7 +26,7 @@
 function nightingale_lastreviewed_metabox() {
 	add_meta_box(
 		'nightingale-last-reviewed-metabox',
-		__( 'Toggle Page Reviewd', 'nightingale' ),
+		__( 'Toggle Page Reviewd', NHSUK_DOMAIN_NAME ),
 		'nightingale_render_lastreviewed',
 		'page',
 		'side',
@@ -52,7 +52,7 @@ function nightingale_render_lastreviewed( $post ) {
 	$checked = 'on' === $sidebar ? true : false;
 	?>
 
-	<p><?php esc_html_e( 'Toggle last reviewed', 'nightingale' ); ?></p>
+	<p><?php esc_html_e( 'Toggle last reviewed', NHSUK_DOMAIN_NAME ); ?></p>
 	<input type="radio" id="review-on" name="lastReviwed" value="on"
 		<?php
 		if ( $checked ) :
@@ -60,7 +60,7 @@ function nightingale_render_lastreviewed( $post ) {
 		endif;
 		?>
 	>
-	<label for="review-on"><?php esc_html_e( 'On', 'nightingale' ); ?></label><br>
+	<label for="review-on"><?php esc_html_e( 'On', NHSUK_DOMAIN_NAME ); ?></label><br>
 	<input type="radio" id="review-off" name="lastReviwed" value=""
 		<?php
 		if ( ! $checked ) :
@@ -68,7 +68,7 @@ function nightingale_render_lastreviewed( $post ) {
 		endif;
 		?>
 	>
-	<label for="review-off"><?php esc_html_e( 'Off', 'nightingale' ); ?></label><br>
+	<label for="review-off"><?php esc_html_e( 'Off', NHSUK_DOMAIN_NAME ); ?></label><br>
 
 	<?php
 
@@ -127,7 +127,7 @@ function nightingale_page_last_reviewed() {
 
 	<div class="nhsuk-review-date">
 		<p class="nhsuk-body-s">
-			<?php esc_html_e( 'Page last reviewed', 'nightingale' ); ?>: <?php echo esc_html( $updated_date ); ?>
+			<?php esc_html_e( 'Page last reviewed', NHSUK_DOMAIN_NAME ); ?>: <?php echo esc_html( $updated_date ); ?>
 		</p>
 	</div>
 

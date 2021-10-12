@@ -11,10 +11,10 @@
 <li class="tribe-events-c-nav__list-item tribe-events-c-nav__list-item--prev">
 	<button
 		class="tribe-events-c-nav__prev tribe-common-b2 tribe-common-b1--min-medium"
-		aria-label="<?php esc_attr_e( 'Previous Day', 'nightingale' ); ?>"
-		title="<?php esc_attr_e( 'Previous Day', 'nightingale' ); ?>"
+		aria-label="<?php esc_attr_e( 'Previous Day', NHSUK_DOMAIN_NAME ); ?>"
+		title="<?php esc_attr_e( 'Previous Day', NHSUK_DOMAIN_NAME ); ?>"
 		disabled
 	>
-		<?php esc_html_e( 'Previous Day', 'nightingale' ); ?>
+		<?php esc_html_e( 'Previous Day', NHSUK_DOMAIN_NAME ); ?>
 	</button>
 </li>

@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <p><a class="aligncenter nhsuk-button" href="<?php esc_html( $dlm_download->the_download_link() ); ?>" rel="nofollow">
 		<?php
 		// translators: link to the download.
-		printf( esc_html_e( 'Download &ldquo;%s&rdquo;', 'nightingale' ), esc_html( $dlm_download->get_title() ) );
+		printf( esc_html_e( 'Download &ldquo;%s&rdquo;', NHSUK_DOMAIN_NAME ), esc_html( $dlm_download->get_title() ) );
 		?>
 		<small>
 			<?php
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			&ndash;
 			<?php
 			// translators: show number of times this has been downloaded.
-			printf( esc_html( _n( 'Downloaded %d time', 'Downloaded %d times', $dlm_download->get_download_count(), 'nightingale' ) ), esc_html( $dlm_download->get_download_count() ) );
+			printf( esc_html( _n( 'Downloaded %d time', 'Downloaded %d times', $dlm_download->get_download_count(), NHSUK_DOMAIN_NAME ) ), esc_html( $dlm_download->get_download_count() ) );
 			?>
 			&ndash;
 			<?php

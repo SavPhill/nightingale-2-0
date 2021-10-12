@@ -2,7 +2,7 @@
 /*
 Theme Name: Nightingale
 Text Domain: nightingale
-Version: 2.3.3
+Version: 2.3.4
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 5.2.4
@@ -8476,7 +8476,7 @@ textarea[type=number] {
 /* ==========================================================================
    #TAG
    ========================================================================== */
-.nhsuk-tag {
+.nhsuk-tag, .learndash-wrapper .ld-status {
   font-weight: 600;
   font-size: 14px;
   font-size: 0.875rem;
@@ -8494,14 +8494,14 @@ textarea[type=number] {
   text-decoration: none;
 }
 @media (min-width: 40.0625em) {
-  .nhsuk-tag {
+  .nhsuk-tag, .learndash-wrapper .ld-status {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1;
   }
 }
 @media print {
-  .nhsuk-tag {
+  .nhsuk-tag, .learndash-wrapper .ld-status {
     font-size: 14pt;
     line-height: 1;
   }
@@ -8509,25 +8509,25 @@ textarea[type=number] {
 
 /* Colour variants
   ========================================================================== */
-.nhsuk-tag--white, .nhsuk-tag.is-style-white {
+.nhsuk-tag--white, .nhsuk-tag.is-style-white, .learndash-wrapper .is-style-white.ld-status {
   background-color: #ffffff;
   border-color: #212b32;
   color: #212b32;
 }
 
-.nhsuk-tag--grey, .nhsuk-tag.is-style-grey {
+.nhsuk-tag--grey, .nhsuk-tag.is-style-grey, .learndash-wrapper .is-style-grey.ld-status {
   background-color: #dbe0e3;
   border-color: #354550;
   color: #354550;
 }
 
-.nhsuk-tag--green, .nhsuk-tag.is-style-green {
+.nhsuk-tag--green, .nhsuk-tag.is-style-green, .learndash-wrapper .is-style-green.ld-status {
   background-color: #cce5d8;
   border-color: #004c23;
   color: #004c23;
 }
 
-.nhsuk-tag--aqua-green, .nhsuk-tag.is-style-aqua-green {
+.nhsuk-tag--aqua-green, .nhsuk-tag.is-style-aqua-green, .learndash-wrapper .is-style-aqua-green.ld-status {
   background-color: #ccedeb;
   border-color: #00524d;
   color: #00524d;
@@ -8539,31 +8539,31 @@ textarea[type=number] {
   color: #004281;
 }
 
-.nhsuk-tag--purple, .nhsuk-tag.is-style-purple {
+.nhsuk-tag--purple, .nhsuk-tag.is-style-purple, .learndash-wrapper .is-style-purple.ld-status {
   background-color: #d6cce3;
   border-color: #240050;
   color: #240050;
 }
 
-.nhsuk-tag--pink, .nhsuk-tag.is-style-pink {
+.nhsuk-tag--pink, .nhsuk-tag.is-style-pink, .learndash-wrapper .is-style-pink.ld-status {
   background-color: #efd3e3;
   border-color: #57133a;
   color: #57133a;
 }
 
-.nhsuk-tag--red, .nhsuk-tag.is-style-red {
+.nhsuk-tag--red, .nhsuk-tag.is-style-red, .learndash-wrapper .is-style-red.ld-status {
   background-color: #f7d4d1;
   border-color: #6b140e;
   color: #6b140e;
 }
 
-.nhsuk-tag--orange, .nhsuk-tag.is-style-orange {
+.nhsuk-tag--orange, .nhsuk-tag.is-style-orange, .learndash-wrapper .is-style-orange.ld-status {
   background-color: #ffdc8e;
   border-color: #4d3708;
   color: #4d3708;
 }
 
-.nhsuk-tag--yellow, .nhsuk-tag.is-style-yellow {
+.nhsuk-tag--yellow, .nhsuk-tag.is-style-yellow, .learndash-wrapper .is-style-yellow.ld-status, .learndash-wrapper .ld-status.ld-status-waiting {
   background-color: #fff59d;
   border-color: #4d4712;
   color: #4d4712;
@@ -9852,6 +9852,9 @@ li.nhsuk-pagination-item--next {
   border-bottom: none;
 }
 
+.learndash-wrapper .learndash_join_button {
+  margin-top: 25px;
+}
 .learndash-wrapper .ld-primary-color {
   color: #005eb8;
 }
@@ -9878,14 +9881,16 @@ li.nhsuk-pagination-item--next {
   top: 33%;
 }
 .learndash-wrapper .ld-status {
-  position: relative;
-}
-.learndash-wrapper .ld-status.ld-status-waiting {
-  border-color: transparent;
+  border-radius: 0;
+  line-height: 1;
+  text-transform: none;
 }
 .learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-label {
   font-size: inherit;
   font-weight: inherit;
+  color: #212b32;
+}
+.learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-price {
   color: #212b32;
 }
 .learndash-wrapper .ld-breadcrumbs .ld-course-status-segment .ld-course-status-content, .learndash-wrapper .ld-course-status .ld-course-status-segment .ld-course-status-content, .learndash-wrapper .ld-item-details .ld-course-status-segment .ld-course-status-content {
@@ -10027,14 +10032,14 @@ nav.learndash-pager ul li {
   float: left;
   margin-right: 16px;
 }
-nav.learndash-pager ul li a.nhsuk-tag {
+nav.learndash-pager ul li a.nhsuk-tag, nav.learndash-pager ul li .learndash-wrapper a.ld-status, .learndash-wrapper nav.learndash-pager ul li a.ld-status {
   color: #ffffff;
 }
-nav.learndash-pager ul li a.nhsuk-tag.focus-visible {
+nav.learndash-pager ul li a.nhsuk-tag.focus-visible, nav.learndash-pager ul li .learndash-wrapper a.focus-visible.ld-status, .learndash-wrapper nav.learndash-pager ul li a.focus-visible.ld-status {
   color: #212b32;
   border: 4px solid #212b32 !important;
 }
-nav.learndash-pager ul li a.nhsuk-tag.nhsuk-tag--white, nav.learndash-pager ul li a.nhsuk-tag.is-style-white {
+nav.learndash-pager ul li a.nhsuk-tag.nhsuk-tag--white, nav.learndash-pager ul li a.nhsuk-tag.is-style-white, nav.learndash-pager ul li .learndash-wrapper a.nhsuk-tag--white.ld-status, nav.learndash-pager ul li .learndash-wrapper a.ld-status.is-style-white, .learndash-wrapper nav.learndash-pager ul li a.nhsuk-tag--white.ld-status, .learndash-wrapper nav.learndash-pager ul li a.ld-status.is-style-white {
   color: #003087;
 }
 

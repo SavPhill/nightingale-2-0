@@ -19,9 +19,9 @@ if ( ! $should_have_type_separator ) {
 $separator_text = '';
 
 if ( 'all_day' === $event->timeslot ) {
-	$separator_text = __( 'All Day', 'nightingale' );
+	$separator_text = __( 'All Day', NHSUK_DOMAIN_NAME );
 } elseif ( 'multiday' === $event->timeslot ) {
-	$separator_text = __( 'Ongoing', 'nightingale' );
+	$separator_text = __( 'Ongoing', NHSUK_DOMAIN_NAME );
 }
 ?>
 <div class="tribe-events-calendar-day__type-separator">

@@ -28,7 +28,7 @@ if ( empty( $more_events ) || empty( $more_url ) ) {
 		echo esc_html(
 			sprintf(
 				/* translators: %d: Name of current month */
-				_n( '+ %d More', '+ %d More', $more_events, 'nightingale' ),
+				_n( '+ %d More', '+ %d More', $more_events, NHSUK_DOMAIN_NAME ),
 				$more_events
 			)
 		)

@@ -6662,7 +6662,7 @@
 .edit-post-visual-editor .nhsuk-table__cell--numeric {
   text-align: right;
 }
-.edit-post-visual-editor .nhsuk-tag {
+.edit-post-visual-editor .nhsuk-tag, .edit-post-visual-editor .learndash-wrapper .ld-status {
   font-weight: 600;
   font-size: 14px;
   font-size: 0.875rem;
@@ -6680,14 +6680,14 @@
   text-decoration: none;
 }
 @media (min-width: 40.0625em) {
-  .edit-post-visual-editor .nhsuk-tag {
+  .edit-post-visual-editor .nhsuk-tag, .edit-post-visual-editor .learndash-wrapper .ld-status {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1;
   }
 }
 @media print {
-  .edit-post-visual-editor .nhsuk-tag {
+  .edit-post-visual-editor .nhsuk-tag, .edit-post-visual-editor .learndash-wrapper .ld-status {
     font-size: 14pt;
     line-height: 1;
   }
@@ -6737,7 +6737,7 @@
   border-color: #4d3708;
   color: #4d3708;
 }
-.edit-post-visual-editor .nhsuk-tag--yellow {
+.edit-post-visual-editor .nhsuk-tag--yellow, .edit-post-visual-editor .learndash-wrapper .ld-status.ld-status-waiting {
   background-color: #fff59d;
   border-color: #4d4712;
   color: #4d4712;
@@ -7490,6 +7490,9 @@
 .edit-post-visual-editor .gf-all-fields li table.gfcs-value td span {
   border-bottom: none;
 }
+.edit-post-visual-editor .learndash-wrapper .learndash_join_button {
+  margin-top: 25px;
+}
 .edit-post-visual-editor .learndash-wrapper .ld-primary-color {
   color: #005eb8;
 }
@@ -7516,14 +7519,16 @@
   top: 33%;
 }
 .edit-post-visual-editor .learndash-wrapper .ld-status {
-  position: relative;
-}
-.edit-post-visual-editor .learndash-wrapper .ld-status.ld-status-waiting {
-  border-color: transparent;
+  border-radius: 0;
+  line-height: 1;
+  text-transform: none;
 }
 .edit-post-visual-editor .learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-label {
   font-size: inherit;
   font-weight: inherit;
+  color: #212b32;
+}
+.edit-post-visual-editor .learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-price {
   color: #212b32;
 }
 .edit-post-visual-editor .learndash-wrapper .ld-breadcrumbs .ld-course-status-segment .ld-course-status-content, .edit-post-visual-editor .learndash-wrapper .ld-course-status .ld-course-status-segment .ld-course-status-content, .edit-post-visual-editor .learndash-wrapper .ld-item-details .ld-course-status-segment .ld-course-status-content {
@@ -7664,14 +7669,14 @@
   float: left;
   margin-right: 16px;
 }
-.edit-post-visual-editor nav.learndash-pager ul li a.nhsuk-tag {
+.edit-post-visual-editor nav.learndash-pager ul li a.nhsuk-tag, .edit-post-visual-editor nav.learndash-pager ul li .learndash-wrapper a.ld-status, .edit-post-visual-editor .learndash-wrapper nav.learndash-pager ul li a.ld-status {
   color: #ffffff;
 }
-.edit-post-visual-editor nav.learndash-pager ul li a.nhsuk-tag.focus-visible {
+.edit-post-visual-editor nav.learndash-pager ul li a.nhsuk-tag.focus-visible, .edit-post-visual-editor nav.learndash-pager ul li .learndash-wrapper a.focus-visible.ld-status, .edit-post-visual-editor .learndash-wrapper nav.learndash-pager ul li a.focus-visible.ld-status {
   color: #212b32;
   border: 4px solid #212b32 !important;
 }
-.edit-post-visual-editor nav.learndash-pager ul li a.nhsuk-tag.nhsuk-tag--white {
+.edit-post-visual-editor nav.learndash-pager ul li a.nhsuk-tag.nhsuk-tag--white, .edit-post-visual-editor nav.learndash-pager ul li .learndash-wrapper a.nhsuk-tag--white.ld-status, .edit-post-visual-editor .learndash-wrapper nav.learndash-pager ul li a.nhsuk-tag--white.ld-status {
   color: #003087;
 }
 .edit-post-visual-editor .ld-course-list-items .ld_course_grid article {

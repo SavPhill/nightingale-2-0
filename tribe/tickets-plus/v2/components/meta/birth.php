@@ -34,7 +34,7 @@ $classes[] = 'nhsuk-form-group';
 		for="<?php echo esc_attr( $field_id . '-month' ); ?>"
 		class="tribe-common-a11y-visual-hide"
 	>
-		<?php echo wp_kses_post( $field->label ) . ' ' . esc_html_x( 'Month', 'birthdate field', 'nightingale' ); ?>
+		<?php echo wp_kses_post( $field->label ) . ' ' . esc_html_x( 'Month', 'birthdate field', NHSUK_DOMAIN_NAME ); ?>
 	</label>
 	<select
 		id="<?php echo esc_attr( $field_id . '-month' ); ?>"
@@ -42,7 +42,7 @@ $classes[] = 'nhsuk-form-group';
 		<?php tribe_required( $required ); ?>
 		class="nhsuk-select"
 	>
-		<option value="" disabled selected><?php esc_html_e( 'Month', 'nightingale' ); ?></option>
+		<option value="" disabled selected><?php esc_html_e( 'Month', NHSUK_DOMAIN_NAME ); ?></option>
 		<?php foreach ( $field->get_months() as $month_number => $month_name ) : ?>
 			<option value="<?php echo esc_attr( $month_number ); ?>"><?php echo esc_html( $month_name ); ?></option>
 		<?php endforeach; ?>
@@ -52,7 +52,7 @@ $classes[] = 'nhsuk-form-group';
 		for="<?php echo esc_attr( $field_id . '-day' ); ?>"
 		class="tribe-common-a11y-visual-hide"
 	>
-		<?php echo wp_kses_post( $field->label ) . ' ' . esc_html_x( 'Day', 'birthdate field', 'nightingale' ); ?>
+		<?php echo wp_kses_post( $field->label ) . ' ' . esc_html_x( 'Day', 'birthdate field', NHSUK_DOMAIN_NAME ); ?>
 	</label>
 	<select
 		id="<?php echo esc_attr( $field_id . '-day' ); ?>"
@@ -60,7 +60,7 @@ $classes[] = 'nhsuk-form-group';
 		<?php tribe_required( $required ); ?>
 		class="nhsuk-select"
 	>
-		<option value="" disabled selected><?php esc_html_e( 'Day', 'nightingale' ); ?></option>
+		<option value="" disabled selected><?php esc_html_e( 'Day', NHSUK_DOMAIN_NAME ); ?></option>
 		<?php foreach ( $field->get_days() as $birth_day ) : ?>
 			<option value="<?php echo esc_attr( $birth_day ); ?>"><?php echo esc_html( $birth_day ); ?></option>
 		<?php endforeach; ?>
@@ -70,7 +70,7 @@ $classes[] = 'nhsuk-form-group';
 		for="<?php echo esc_attr( $field_id . '-year' ); ?>"
 		class="tribe-common-a11y-visual-hide"
 	>
-		<?php echo wp_kses_post( $field->label ) . ' ' . esc_html_x( 'Year', 'birthdate field', 'nightingale' ); ?>
+		<?php echo wp_kses_post( $field->label ) . ' ' . esc_html_x( 'Year', 'birthdate field', NHSUK_DOMAIN_NAME ); ?>
 	</label>
 	<select
 		id="<?php echo esc_attr( $field_id . '-year' ); ?>"
@@ -78,7 +78,7 @@ $classes[] = 'nhsuk-form-group';
 		<?php tribe_required( $required ); ?>
 		class="nhsuk-select"
 	>
-		<option value="" disabled selected><?php esc_html_e( 'Year', 'nightingale' ); ?></option>
+		<option value="" disabled selected><?php esc_html_e( 'Year', NHSUK_DOMAIN_NAME ); ?></option>
 		<?php foreach ( $field->get_years() as $birth_year ) : ?>
 			<option value="<?php echo esc_attr( $birth_year ); ?>"><?php echo esc_html( $birth_year ); ?></option>
 		<?php endforeach; ?>

@@ -31,7 +31,7 @@ $event_id = get_the_ID();
 		">
 			<?php
 			/* translators: %s: events. */
-			printf( '&laquo; ' . esc_html_x( 'All %s', '%s Events plural label', 'nightingale' ), esc_html( $events_label_plural ) );
+			printf( '&laquo; ' . esc_html_x( 'All %s', '%s Events plural label', NHSUK_DOMAIN_NAME ), esc_html( $events_label_plural ) );
 			?>
 		</a>
 	</p>
@@ -152,7 +152,7 @@ $event_id = get_the_ID();
 				?>
 
 
-				<h3><?php esc_html_e( 'Questions about this event?', 'nightingale' ); ?></h3>
+				<h3><?php esc_html_e( 'Questions about this event?', NHSUK_DOMAIN_NAME ); ?></h3>
 
 				<p>Organiser
 					<?php
@@ -181,7 +181,7 @@ $event_id = get_the_ID();
 						 * translators: %1: email.
 						 * translators: %2: email subject.
 						 */
-						__( '<p><stong>Email:</stong> <a href="mailto:%1$s?subject=%2$s">%1$s</a></p>', 'nightingale' ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						__( '<p><stong>Email:</stong> <a href="mailto:%1$s?subject=%2$s">%1$s</a></p>', NHSUK_DOMAIN_NAME ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						esc_html( $email ),
 						get_the_title() // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					);
@@ -191,7 +191,7 @@ $event_id = get_the_ID();
 				if ( $phone ) :
 
 					/* translators: %s: Phone number. */
-					echo sprintf( esc_html( __( '<p>Phone: %s</p>', 'nightingale' ) ), esc_html( $phone ) );
+					echo sprintf( esc_html( __( '<p>Phone: %s</p>', NHSUK_DOMAIN_NAME ) ), esc_html( $phone ) );
 
 				endif;
 

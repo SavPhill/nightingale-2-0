@@ -20,7 +20,7 @@ get_header();
 			<h1 class="nhsuk-heading-xl">
 				<?php
 				/* translators: %s: search term */
-				printf( esc_html__( 'Search Results for: %s', 'nightingale' ), '<span>' . get_search_query() . '</span>' );
+				printf( esc_html__( 'Search Results for: %s', NHSUK_DOMAIN_NAME ), '<span>' . get_search_query() . '</span>' );
 				?>
 			</h1>
 		</header>

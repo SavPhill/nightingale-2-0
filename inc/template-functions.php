@@ -111,7 +111,7 @@ function nightingale_read_more_posts( $title, $link ) {
 	if ( '' !== $link ) {
 		$readmorelink .= '<a class="nhsuk-card__link nhsuk-action-link__link" href="' . $link . '">';
 	}
-	$readmorelink .= '<span class="nhsuk-action-link__text">' . esc_html__( 'read more ', 'nightingale' ) . '</span><span class="nhsuk-u-visually-hidden">' . esc_html__( ' about ', 'nightingale' ) . $title . '</span><svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+	$readmorelink .= '<span class="nhsuk-action-link__text">' . esc_html__( 'read more ', NHSUK_DOMAIN_NAME ) . '</span><span class="nhsuk-u-visually-hidden">' . esc_html__( ' about ', NHSUK_DOMAIN_NAME ) . $title . '</span><svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
 	  <path d="M0 0h24v24H0z" fill="none"></path>
 	  <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
 	</svg>';
@@ -216,7 +216,7 @@ function nightingale_latest_posts_category_filter( $catcount, $categories, $cato
 	$postfilter = wp_unslash( isset( $_POST['cat_filter'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
 	if ( ( $catcount > 1 ) || ( empty( $categories ) ) ) : // there is more than one category, or _all_ categories are available.
 		echo '<div class="nhsuk-width-container nhsuk-cat-filter"><span style="float: right;"><form action="" method="post">';
-		echo '<label class="nhsuk-u-visually-hidden" for="cat_filter">' . esc_html__( 'Filter the posts you can see', 'nightingale' ) . '</label>';
+		echo '<label class="nhsuk-u-visually-hidden" for="cat_filter">' . esc_html__( 'Filter the posts you can see', NHSUK_DOMAIN_NAME ) . '</label>';
 		if ( $catcount > 1 ) : // there is more than one category.
 			echo '<select name="cat_filter" id="cat_filter" class="nhsuk-select"><option value="0"></option>';
 			foreach ( $catout as $catfiltered ) {
@@ -232,7 +232,7 @@ function nightingale_latest_posts_category_filter( $catcount, $categories, $cato
 					'selected'        => $postfilter,
 					'hierarchical'    => true,
 					'class'           => 'nhsuk-select',
-					'show_option_all' => __( 'Show All', 'nightingale' ),
+					'show_option_all' => __( 'Show All', NHSUK_DOMAIN_NAME ),
 				)
 			);
 		endif;
@@ -243,9 +243,9 @@ function nightingale_latest_posts_category_filter( $catcount, $categories, $cato
 		elseif ( $postfilter ) :
 			echo '<div class="nhsuk-width-container nhsuk-cat-filter">';
 			echo '<h2 class="nhsuk-heading-m">';
-			esc_html_e( 'Showing Posts from the category ', 'nightingale' );
+			esc_html_e( 'Showing Posts from the category ', NHSUK_DOMAIN_NAME );
 			echo esc_html( get_cat_name( $postfilter ) ) . '</h2><span class="nhsuk-cat-reset">';
-			echo '<form action="" method="post"><input type="hidden" name="cat_filter" value=""0" /><input type="submit" class="nhsuk-button" value="' . esc_html__( 'Reset Filter', 'nightingale' ) . '" /></form>';
+			echo '<form action="" method="post"><input type="hidden" name="cat_filter" value=""0" /><input type="submit" class="nhsuk-button" value="' . esc_html__( 'Reset Filter', NHSUK_DOMAIN_NAME ) . '" /></form>';
 			echo '</span></div>';
 	endif;
 }
@@ -258,7 +258,7 @@ add_filter( 'comment_form_field_cookies', 'nightingale_style_comment_cookies' );
 function nightingale_style_comment_cookies() {
 	return '<p class="comment-form-cookies-consent nhsuk-checkboxes__item">
 				<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" class="nhsuk-checkboxes__input" value="yes">
-				<label class="nhsuk-checkboxes__label" for="wp-comment-cookies-consent">' . esc_html__( 'Save my name, email, and website in this browser for the next time I comment.', 'nightingale' ) . '</label>
+				<label class="nhsuk-checkboxes__label" for="wp-comment-cookies-consent">' . esc_html__( 'Save my name, email, and website in this browser for the next time I comment.', NHSUK_DOMAIN_NAME ) . '</label>
 			</p>';
 }
 

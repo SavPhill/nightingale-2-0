@@ -54,17 +54,17 @@ if ( ! function_exists( 'nightingale_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'nightingale' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', NHSUK_DOMAIN_NAME ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<p class="cat-links nhsuk-tag nhsuk-tag--grey">' . esc_html__( 'Posted in %1$s', 'nightingale' ) . '</p>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<p class="cat-links nhsuk-tag nhsuk-tag--grey">' . esc_html__( 'Posted in %1$s', NHSUK_DOMAIN_NAME ) . '</p>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'nightingale' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', NHSUK_DOMAIN_NAME ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<p class="tags-links nhsuk-tag nhsuk-tag--grey">' . esc_html__( 'Tagged %1$s', 'nightingale' ) . '</p>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<p class="tags-links nhsuk-tag nhsuk-tag--grey">' . esc_html__( 'Tagged %1$s', NHSUK_DOMAIN_NAME ) . '</p>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -74,7 +74,7 @@ if ( ! function_exists( 'nightingale_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'nightingale' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', NHSUK_DOMAIN_NAME ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -91,7 +91,7 @@ if ( ! function_exists( 'nightingale_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <p class="screen-reader-text">%s</p>', 'nightingale' ),
+					__( 'Edit <p class="screen-reader-text">%s</p>', NHSUK_DOMAIN_NAME ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -179,7 +179,7 @@ function nightingale_comment_display( $comment, $args, $depth ) {
 	<div class="comment-author vcard">
 		<?php
 		/* translators: s: link to author */
-		printf( __( '<cite class="fn">%s</cite>', 'nightingale' ), get_comment_author_link() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		printf( __( '<cite class="fn">%s</cite>', NHSUK_DOMAIN_NAME ), get_comment_author_link() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		?>
 		<div class="comment-meta commentmetadata">
 			<?php
@@ -195,7 +195,7 @@ function nightingale_comment_display( $comment, $args, $depth ) {
 	</div>
 	<?php
 	if ( '0' === $comment->comment_approved ) {
-		echo '<em class="comment-awaiting-moderation">' . esc_html( _e( 'Your comment is awaiting moderation.', 'nightingale' ) ) . '</em><br/>';
+		echo '<em class="comment-awaiting-moderation">' . esc_html( _e( 'Your comment is awaiting moderation.', NHSUK_DOMAIN_NAME ) ) . '</em><br/>';
 	}
 
 	echo '<div class="reply">';

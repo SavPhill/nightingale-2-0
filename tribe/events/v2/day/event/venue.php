@@ -15,7 +15,7 @@ if ( ! $event->venues->count() ) {
 	return;
 }
 
-$separator            = esc_html_x( ', ', 'Address separator', 'nightingale' );
+$separator            = esc_html_x( ', ', 'Address separator', NHSUK_DOMAIN_NAME );
 $venue                = $event->venues[0];
 $append_after_address = array_filter( array_map( 'trim', [ $venue->city, $venue->state_province, $venue->state, $venue->province ] ) );
 $address              = $venue->address . ( $venue->address && $append_after_address ? $separator : '' );

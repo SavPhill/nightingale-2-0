@@ -41,8 +41,8 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'section_header',
 		array(
-			'title'       => esc_html__( 'Header', 'nightingale' ),
-			'description' => esc_attr__( 'Customise your header display', 'nightingale' ),
+			'title'       => esc_html__( 'Header', NHSUK_DOMAIN_NAME ),
+			'description' => esc_attr__( 'Customise your header display', NHSUK_DOMAIN_NAME ),
 			'priority'    => 10,
 		)
 	);
@@ -62,13 +62,13 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'show_search',
 		array(
-			'label'       => esc_html__( 'Show Search Box?', 'nightingale' ),
-			'description' => esc_html__( 'Would you like to show a search box in the top right of your site?', 'nightingale' ),
+			'label'       => esc_html__( 'Show Search Box?', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Would you like to show a search box in the top right of your site?', NHSUK_DOMAIN_NAME ),
 			'section'     => 'section_header',
 			'type'        => 'radio',
 			'choices'     => array(
-				'yes' => esc_html__( 'Yes', 'nightingale' ),
-				'no'  => esc_html__( 'No', 'nightingale' ),
+				'yes' => esc_html__( 'Yes', NHSUK_DOMAIN_NAME ),
+				'no'  => esc_html__( 'No', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -87,13 +87,13 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'header_styles',
 		array(
-			'label'       => esc_html__( 'Header Colour', 'nightingale' ),
-			'description' => esc_html__( 'What background would you like for your header region?', 'nightingale' ),
+			'label'       => esc_html__( 'Header Colour', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'What background would you like for your header region?', NHSUK_DOMAIN_NAME ),
 			'section'     => 'section_header',
 			'type'        => 'radio',
 			'choices'     => array(
-				'normal'   => esc_html__( 'Solid Blue', 'nightingale' ),
-				'inverted' => esc_html__( 'White Logo Bar', 'nightingale' ),
+				'normal'   => esc_html__( 'Solid Blue', NHSUK_DOMAIN_NAME ),
+				'inverted' => esc_html__( 'White Logo Bar', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -112,13 +112,13 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'org_name_checkbox',
 		array(
-			'label'       => esc_html__( 'Do you wish to add an organisation name to the logo and copyright?', 'nightingale' ),
-			'description' => esc_html__( 'This is used if your oganisation name should be different from the site title. It is also picked up for the copyright statement in your footer', 'nightingale' ),
+			'label'       => esc_html__( 'Do you wish to add an organisation name to the logo and copyright?', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'This is used if your oganisation name should be different from the site title. It is also picked up for the copyright statement in your footer', NHSUK_DOMAIN_NAME ),
 			'section'     => 'title_tagline',
 			'type'        => 'radio',
 			'choices'     => array(
-				'yes' => esc_html__( 'Yes', 'nightingale' ),
-				'no'  => esc_html__( 'No', 'nightingale' ),
+				'yes' => esc_html__( 'Yes', NHSUK_DOMAIN_NAME ),
+				'no'  => esc_html__( 'No', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -133,7 +133,7 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'org_name_field',
 		array(
-			'label'           => esc_html__( 'Enter Organisation name', 'nightingale' ),
+			'label'           => esc_html__( 'Enter Organisation name', NHSUK_DOMAIN_NAME ),
 			'section'         => 'title_tagline',
 			'type'            => 'text',
 			'active_callback' => function () use ( $wp_customize ) {
@@ -156,13 +156,13 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'nhs_logo',
 		array(
-			'label'       => esc_html__( 'Do you wish to use the NHS logo?', 'nightingale' ),
-			'description' => esc_html__( 'this setting is ignored if you have uploaded a custom logo above. Please note the NHS logo is a trademark and should only be used by organisations that have permission to use it as part of their branding.', 'nightingale' ),
+			'label'       => esc_html__( 'Do you wish to use the NHS logo?', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'this setting is ignored if you have uploaded a custom logo above. Please note the NHS logo is a trademark and should only be used by organisations that have permission to use it as part of their branding.', NHSUK_DOMAIN_NAME ),
 			'section'     => 'title_tagline',
 			'type'        => 'radio',
 			'choices'     => array(
-				'yes' => esc_html__( 'Yes', 'nightingale' ),
-				'no'  => esc_html__( 'No', 'nightingale' ),
+				'yes' => esc_html__( 'Yes', NHSUK_DOMAIN_NAME ),
+				'no'  => esc_html__( 'No', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -182,13 +182,13 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'logo_type',
 		array(
-			'label'       => esc_html__( 'Logo Builder', 'nightingale' ),
-			'description' => esc_html__( 'You can create your own site logo. It is strongly recommened to use the NHS logo if you are able to. This only takes effect if you have not uploaded a site logo. Both options are accepted NHS design patterns.', 'nightingale' ),
+			'label'       => esc_html__( 'Logo Builder', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'You can create your own site logo. It is strongly recommened to use the NHS logo if you are able to. This only takes effect if you have not uploaded a site logo. Both options are accepted NHS design patterns.', NHSUK_DOMAIN_NAME ),
 			'section'     => 'title_tagline',
 			'type'        => 'radio',
 			'choices'     => array(
-				'transactional' => esc_html__( 'Inline (shows just site name to the right of logo)', 'nightingale' ),
-				'organisation'  => esc_html__( 'Block (shows both site name and tagline beneath logo)', 'nightingale' ),
+				'transactional' => esc_html__( 'Inline (shows just site name to the right of logo)', NHSUK_DOMAIN_NAME ),
+				'organisation'  => esc_html__( 'Block (shows both site name and tagline beneath logo)', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -208,8 +208,8 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'theme_colour',
 		array(
-			'label'       => esc_html__( 'Theme Colour', 'nightingale' ),
-			'description' => esc_html__( 'If you wish to change the default colour of the theme, this is where you do it. Please note, this will disable the inline critical-css and may have a slight performance impact on your visible loadtimes. It may also affect the accessability of your site.', 'nightingale' ),
+			'label'       => esc_html__( 'Theme Colour', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'If you wish to change the default colour of the theme, this is where you do it. Please note, this will disable the inline critical-css and may have a slight performance impact on your visible loadtimes. It may also affect the accessability of your site.', NHSUK_DOMAIN_NAME ),
 			'section'     => 'colors',
 			'type'        => 'select',
 			'choices'     => nightingale_get_theme_colours(),
@@ -224,8 +224,8 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'section_layout',
 		array(
-			'title'       => esc_html__( 'Layout', 'nightingale' ),
-			'description' => esc_attr__( 'Customise your site layout', 'nightingale' ),
+			'title'       => esc_html__( 'Layout', NHSUK_DOMAIN_NAME ),
+			'description' => esc_attr__( 'Customise your site layout', NHSUK_DOMAIN_NAME ),
 			'priority'    => 30,
 		)
 	);
@@ -244,14 +244,14 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'sidebar_location',
 		array(
-			'label'       => esc_html__( 'Where would you like the sidebar to appear?', 'nightingale' ),
-			'description' => esc_html__( 'Standard layout puts the sidebar to the right. You can change this here. WARNING: if your sidebar is empty, but you have sidebar set to left, your content will be floating a third of the way across the page, which could look weird!', 'nightingale' ),
+			'label'       => esc_html__( 'Where would you like the sidebar to appear?', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Standard layout puts the sidebar to the right. You can change this here. WARNING: if your sidebar is empty, but you have sidebar set to left, your content will be floating a third of the way across the page, which could look weird!', NHSUK_DOMAIN_NAME ),
 			'section'     => 'section_layout',
 			'priority'    => '100',
 			'type'        => 'radio',
 			'choices'     => array(
-				'right' => esc_html__( 'Right', 'nightingale' ),
-				'left'  => esc_html__( 'Left', 'nightingale' ),
+				'right' => esc_html__( 'Right', NHSUK_DOMAIN_NAME ),
+				'left'  => esc_html__( 'Left', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -270,14 +270,14 @@ function nightingale_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'featured_img_display',
 		array(
-			'label'       => esc_html__( 'Display Featured Image on posts / pages single view', 'nightingale' ),
-			'description' => esc_html__( 'Featured images are really useful for search results and listing pages. Sometimes its handy to have them for this, but you don\'t want the image to show on the individual page. If thats the case, turn them off here.', 'nightingale' ),
+			'label'       => esc_html__( 'Display Featured Image on posts / pages single view', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Featured images are really useful for search results and listing pages. Sometimes its handy to have them for this, but you don\'t want the image to show on the individual page. If thats the case, turn them off here.', NHSUK_DOMAIN_NAME ),
 			'section'     => 'section_layout',
 			'priority'    => '100',
 			'type'        => 'radio',
 			'choices'     => array(
-				'true'  => esc_html__( 'Yes', 'nightingale' ),
-				'false' => esc_html__( 'No', 'nightingale' ),
+				'true'  => esc_html__( 'Yes', NHSUK_DOMAIN_NAME ),
+				'false' => esc_html__( 'No', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -303,12 +303,12 @@ function nightingale_customize_register( $wp_customize ) {
 			'section'     => 'section_layout',
 			'priority'    => '110',
 			'type'        => 'radio',
-			'label'       => esc_html__( 'Featured images display', 'nightingale' ),
-			'description' => esc_html__( 'Show Featured Image at top of individual posts, or to the side. (If Display Featured Image above is set to no, this setting is ignored)', 'nightingale' ),
+			'label'       => esc_html__( 'Featured images display', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Show Featured Image at top of individual posts, or to the side. (If Display Featured Image above is set to no, this setting is ignored)', NHSUK_DOMAIN_NAME ),
 			'choices'     => array(
-				'top'   => esc_html__( 'Top of post', 'nightingale' ),
-				'left'  => esc_html__( 'Floated left', 'nightingale' ),
-				'right' => esc_html__( 'Floated right', 'nightingale' ),
+				'top'   => esc_html__( 'Top of post', NHSUK_DOMAIN_NAME ),
+				'left'  => esc_html__( 'Floated left', NHSUK_DOMAIN_NAME ),
+				'right' => esc_html__( 'Floated right', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -333,11 +333,11 @@ function nightingale_customize_register( $wp_customize ) {
 			'section'     => 'section_layout',
 			'priority'    => '120',
 			'type'        => 'radio',
-			'label'       => esc_html__( 'Show sitemap on 404 page?', 'nightingale' ),
-			'description' => esc_html__( 'Choose whether or not to show the WordPress sitemap on 404 pages.', 'nightingale' ),
+			'label'       => esc_html__( 'Show sitemap on 404 page?', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Choose whether or not to show the WordPress sitemap on 404 pages.', NHSUK_DOMAIN_NAME ),
 			'choices'     => array(
-				'true'  => esc_html__( 'Yes', 'nightingale' ),
-				'false' => esc_html__( 'No', 'nightingale' ),
+				'true'  => esc_html__( 'Yes', NHSUK_DOMAIN_NAME ),
+				'false' => esc_html__( 'No', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -355,8 +355,8 @@ function nightingale_add_blog_settings( $wp_customize ) {
 	$wp_customize->add_section(
 		'blog_panel',
 		array(
-			'title'          => esc_html__( 'Blog Settings', 'nightingale' ),
-			'description'    => esc_html__( 'Extra settings for the Blog page', 'nightingale' ),
+			'title'          => esc_html__( 'Blog Settings', NHSUK_DOMAIN_NAME ),
+			'description'    => esc_html__( 'Extra settings for the Blog page', NHSUK_DOMAIN_NAME ),
 			'capability'     => 'edit_theme_options',
 			'theme-supports' => '',
 			'priority'       => '150',
@@ -383,11 +383,11 @@ function nightingale_add_blog_settings( $wp_customize ) {
 			'settings'    => 'blog_sidebar',
 			'section'     => 'blog_panel',
 			'type'        => 'radio',
-			'label'       => esc_html__( 'Display Sidebar', 'nightingale' ),
-			'description' => esc_html__( 'Choose whether or not to display the sidebar on the blog page', 'nightingale' ),
+			'label'       => esc_html__( 'Display Sidebar', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Choose whether or not to display the sidebar on the blog page', NHSUK_DOMAIN_NAME ),
 			'choices'     => array(
-				'true'  => esc_html__( 'Sidebar', 'nightingale' ),
-				'false' => esc_html__( 'No Sidebar', 'nightingale' ),
+				'true'  => esc_html__( 'Sidebar', NHSUK_DOMAIN_NAME ),
+				'false' => esc_html__( 'No Sidebar', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -412,11 +412,11 @@ function nightingale_add_blog_settings( $wp_customize ) {
 			'settings'    => 'blog_author_display',
 			'section'     => 'blog_panel',
 			'type'        => 'radio',
-			'label'       => esc_html__( 'Show Author Name on Blog Posts?', 'nightingale' ),
-			'description' => esc_html__( 'Choose whether or not to display the authors name (and link) on the blog page', 'nightingale' ),
+			'label'       => esc_html__( 'Show Author Name on Blog Posts?', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Choose whether or not to display the authors name (and link) on the blog page', NHSUK_DOMAIN_NAME ),
 			'choices'     => array(
-				'true'  => esc_html__( 'Show author', 'nightingale' ),
-				'false' => esc_html__( 'Dont show author', 'nightingale' ),
+				'true'  => esc_html__( 'Show author', NHSUK_DOMAIN_NAME ),
+				'false' => esc_html__( 'Dont show author', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -441,11 +441,11 @@ function nightingale_add_blog_settings( $wp_customize ) {
 			'settings'    => 'blog_date_display',
 			'section'     => 'blog_panel',
 			'type'        => 'radio',
-			'label'       => esc_html__( 'Show Post Date on Blog Posts?', 'nightingale' ),
-			'description' => esc_html__( 'Choose whether or not to display the date a post was made on the blog page', 'nightingale' ),
+			'label'       => esc_html__( 'Show Post Date on Blog Posts?', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Choose whether or not to display the date a post was made on the blog page', NHSUK_DOMAIN_NAME ),
 			'choices'     => array(
-				'true'  => esc_html__( 'Show date', 'nightingale' ),
-				'false' => esc_html__( 'Dont show date', 'nightingale' ),
+				'true'  => esc_html__( 'Show date', NHSUK_DOMAIN_NAME ),
+				'false' => esc_html__( 'Dont show date', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -470,11 +470,11 @@ function nightingale_add_blog_settings( $wp_customize ) {
 			'settings'    => 'blog_image_display',
 			'section'     => 'blog_panel',
 			'type'        => 'radio',
-			'label'       => esc_html__( 'Images on Blog Listing ', 'nightingale' ),
-			'description' => esc_html__( 'Choose whether to display images on blog listing page as square or default (square will ensure all blocks are consistently laid out)', 'nightingale' ),
+			'label'       => esc_html__( 'Images on Blog Listing ', NHSUK_DOMAIN_NAME ),
+			'description' => esc_html__( 'Choose whether to display images on blog listing page as square or default (square will ensure all blocks are consistently laid out)', NHSUK_DOMAIN_NAME ),
 			'choices'     => array(
-				'default'               => esc_html__( 'Leave as default proportions', 'nightingale' ),
-				'nightingale-square-md' => esc_html__( 'Show as square (images may be cropped)', 'nightingale' ),
+				'default'               => esc_html__( 'Leave as default proportions', NHSUK_DOMAIN_NAME ),
+				'nightingale-square-md' => esc_html__( 'Show as square (images may be cropped)', NHSUK_DOMAIN_NAME ),
 			),
 		)
 	);
@@ -499,8 +499,8 @@ function nightingale_add_blog_settings( $wp_customize ) {
 				'settings'    => 'blog_fallback',
 				'mime_type'   => 'image',
 				'section'     => 'blog_panel',
-				'label'       => esc_html__( 'Blog Fallback Image', 'nightingale' ),
-				'description' => esc_html__( 'Select a fallback image if the blog post does not have a featured image. Leave blank if no fallback wanted', 'nightingale' ),
+				'label'       => esc_html__( 'Blog Fallback Image', NHSUK_DOMAIN_NAME ),
+				'description' => esc_html__( 'Select a fallback image if the blog post does not have a featured image. Leave blank if no fallback wanted', NHSUK_DOMAIN_NAME ),
 			)
 		)
 	);

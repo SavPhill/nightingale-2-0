@@ -26,7 +26,7 @@
 function nightingale_colourpicker_metabox() {
 	add_meta_box(
 		'nightingale-page-color-metabox',
-		__( 'Colour Picker', 'nightingale' ),
+		__( 'Colour Picker', NHSUK_DOMAIN_NAME ),
 		'nightingale_render_colourpicker',
 		'page',
 		'side',
@@ -48,7 +48,7 @@ function nightingale_render_colourpicker( $post ) {
 	$sidebar       = esc_attr( get_post_meta( $post->ID, 'page-color', true ) );
 	$theme_colours = nightingale_get_theme_colours();
 	?>
-	<label for="color-picker"><?php esc_html_e( 'Choose colour for the page. (Refresh the page for changes to take effect.)', 'nightingale' ); ?></label>
+	<label for="color-picker"><?php esc_html_e( 'Choose colour for the page. (Refresh the page for changes to take effect.)', NHSUK_DOMAIN_NAME ); ?></label>
 	<select id="color-picker" name="color-picker" class="widefat">
 		<?php foreach ( $theme_colours as $name => $colour ) : ?>
 			<?php $select = esc_attr( sanitize_title( $colour ) ) === $sidebar ? 'selected' : ''; ?>

@@ -16,9 +16,9 @@
 		rel="prev"
 		class="tribe-events-c-nav__prev tribe-common-b2 tribe-common-b1--min-medium"
 		data-js="tribe-events-view-link"
-		aria-label="<?php esc_attr_e( 'Previous Day', 'nightingale' ); ?>"
-		title="<?php esc_attr_e( 'Previous Day', 'nightingale' ); ?>"
+		aria-label="<?php esc_attr_e( 'Previous Day', NHSUK_DOMAIN_NAME ); ?>"
+		title="<?php esc_attr_e( 'Previous Day', NHSUK_DOMAIN_NAME ); ?>"
 	>
-		<?php esc_html_e( 'Previous Day', 'nightingale' ); ?>
+		<?php esc_html_e( 'Previous Day', NHSUK_DOMAIN_NAME ); ?>
 	</a>
 </li>

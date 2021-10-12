@@ -40,9 +40,9 @@ class Nightingale_Subpages_Widget extends WP_Widget {
 	public function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget_subpages',
-			'description' => __( 'Lists current section subpages', 'nightingale' ),
+			'description' => __( 'Lists current section subpages', NHSUK_DOMAIN_NAME ),
 		);
-		parent::__construct( 'subpages-widget', __( 'Subpages Widget', 'nightingale' ), $widget_ops );
+		parent::__construct( 'subpages-widget', __( 'Subpages Widget', NHSUK_DOMAIN_NAME ), $widget_ops );
 	}
 
 	/**
@@ -221,28 +221,28 @@ class Nightingale_Subpages_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
 		<p>
-			<label for="title"><?php esc_html_e( 'Title:', 'nightingale' ); ?></label>
+			<label for="title"><?php esc_html_e( 'Title:', NHSUK_DOMAIN_NAME ); ?></label>
 			<input class="widefat" type="text" id="title" <?php echo 'name="' . esc_attr( $this->get_field_name( 'title' ) ) . '" value="' . esc_attr( $instance['title'] ) . '"'; ?> />
 		</p>
 
 		<p>
 			<input class="checkbox" type="checkbox" value="1" <?php checked( $instance['title_from_parent'], 1 ); ?> id="title_from_parent" name="<?php echo esc_attr( $this->get_field_name( 'title_from_parent' ) ); ?>" />
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title_from_parent' ) ); ?>"><?php	echo esc_html( __( 'Use top level page as section title.', 'nightingale' ) ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title_from_parent' ) ); ?>"><?php	echo esc_html( __( 'Use top level page as section title.', NHSUK_DOMAIN_NAME ) ); ?></label>
 		</p>
 
 		<p>
 			<input class="checkbox" type="checkbox" value="1" <?php checked( $instance['title_link'], 1 ); ?> id="title_link" name="<?php echo esc_attr( $this->get_field_name( 'title_link' ) ); ?>" />
-			<label for="title_link"><?php echo esc_html( __( 'Make title a link', 'nightingale' ) ) . esc_html( __( ' (only if "use top level page" is checked)', 'nightingale' ) ); ?></label>
+			<label for="title_link"><?php echo esc_html( __( 'Make title a link', NHSUK_DOMAIN_NAME ) ) . esc_html( __( ' (only if "use top level page" is checked)', NHSUK_DOMAIN_NAME ) ); ?></label>
 		</p>
 
 		<p>
 			<input class="checkbox" type="checkbox" value="1" <?php checked( $instance['deep_subpages'], 1 ); ?> id="deep_subpages" name="<?php echo esc_attr( $this->get_field_name( 'deep_subpages' ) ); ?>"/>
-			<label for="deep_subpages"><?php echo esc_html( __( 'Include the current pages subpages', 'nightingale' ) ); ?></label>
+			<label for="deep_subpages"><?php echo esc_html( __( 'Include the current pages subpages', NHSUK_DOMAIN_NAME ) ); ?></label>
 		</p>
 
 		<p>
 			<input class="checkbox" type="checkbox" value="1" <?php checked( $instance['nest_subpages'], 1 ); ?> id="nest_subpages" name="<?php echo esc_attr( $this->get_field_name( 'nest_subpages' ) ); ?>"/>
-			<label for="nest_subpages"><?php echo esc_html( __( 'Nest sub-page inside parent ', 'nightingale' ) ) . esc_html( __( "(only if 'Include the current pages subpages' is checked)", 'nightingale' ) ); ?></label>
+			<label for="nest_subpages"><?php echo esc_html( __( 'Nest sub-page inside parent ', NHSUK_DOMAIN_NAME ) ) . esc_html( __( "(only if 'Include the current pages subpages' is checked)", NHSUK_DOMAIN_NAME ) ); ?></label>
 		</p>
 
 		<?php

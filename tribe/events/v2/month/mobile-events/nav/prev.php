@@ -30,7 +30,7 @@
 				__(
 					'Previous month,
 					%1$s',
-					'nightingale'
+					NHSUK_DOMAIN_NAME
 				),
 				$label
 			)
@@ -45,7 +45,7 @@
 				__(
 					'Previous month,
 					%1$s',
-					'nightingale'
+					NHSUK_DOMAIN_NAME
 				),
 				$label
 			)

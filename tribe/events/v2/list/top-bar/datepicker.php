@@ -41,7 +41,7 @@ $icons = nightingale_events_icons();
 
 	<div class="tribe-events-c-top-bar__datepicker">
 
-		<span> <?php echo esc_html__( 'Show events from', 'nightingale' ); ?></span>
+		<span> <?php echo esc_html__( 'Show events from', NHSUK_DOMAIN_NAME ); ?></span>
 
 		<button
 			class="tribe-common-h3 tribe-common-h--alt tribe-events-c-top-bar__datepicker-button"
@@ -93,7 +93,7 @@ $icons = nightingale_events_icons();
 			class="tribe-events-c-top-bar__datepicker-label tribe-common-a11y-visual-hide"
 			for="tribe-events-top-bar-date"
 		>
-			<?php esc_html_e( 'Select date.', 'nightingale' ); ?>
+			<?php esc_html_e( 'Select date.', NHSUK_DOMAIN_NAME ); ?>
 		</label>
 		<input
 			type="text"

@@ -23,10 +23,10 @@ get_header();
 				</header>
 				<div class="page-content">
 					<div class="wp-block-nhsblocks-panel1 nhsuk-do-dont-list is-style-panel-with-label">
-						<h3 class="nhsuk-do-dont-list__label"><?php echo esc_html__( 'Oops', 'nightingale' ); ?></h3>
+						<h3 class="nhsuk-do-dont-list__label"><?php echo esc_html__( 'Oops', NHSUK_DOMAIN_NAME ); ?></h3>
 						<div class="paneltext">
-							<p><?php echo esc_html__( 'Sorry, this page can\'t be found at the moment, please use the search facility below, select an item from the contents or alternatively return to the home page', 'nightingale' ); ?></p>
-							<a class="wp-block-nhsblocks-nhsbutton alignright nhsuk-button" href="<?php echo esc_attr( get_home_url() ); ?>"><?php echo esc_html__( 'Home Page', 'nightingale' ); ?></a>
+							<p><?php echo esc_html__( 'Sorry, this page can\'t be found at the moment, please use the search facility below, select an item from the contents or alternatively return to the home page', NHSUK_DOMAIN_NAME ); ?></p>
+							<a class="wp-block-nhsblocks-nhsbutton alignright nhsuk-button" href="<?php echo esc_attr( get_home_url() ); ?>"><?php echo esc_html__( 'Home Page', NHSUK_DOMAIN_NAME ); ?></a>
 							<?php
 							get_search_form();
 							?>

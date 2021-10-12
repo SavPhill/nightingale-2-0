@@ -37,11 +37,11 @@ $base_url    = esc_url_raw( trailingslashit( get_home_url() . '/' . tribe_get_op
 	<?php $this->template( 'components/top-bar/actions' ); ?>
 
 	<label class="nhsuk-label events-dropdown" for="select-1">
-		<?php echo esc_html__( 'Event categories', 'nightingale' ); ?>
+		<?php echo esc_html__( 'Event categories', NHSUK_DOMAIN_NAME ); ?>
 	</label>
 
 	<select name="select-1" id="select-1" class="nhsuk-select">
-		<option value="<?php echo esc_attr( $base_url ); ?>"><?php echo esc_html__( 'All events', 'nightingale' ); ?></option>
+		<option value="<?php echo esc_attr( $base_url ); ?>"><?php echo esc_html__( 'All events', NHSUK_DOMAIN_NAME ); ?></option>
 
 		<?php
 		foreach ( $event_terms as $tribeterm ) :

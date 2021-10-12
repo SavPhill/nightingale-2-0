@@ -25,12 +25,12 @@ $event_date_attr = $event->dates->start->format( Dates::DBDATEFORMAT );
 	<?php if ( $event->featured ) : ?>
 		<em
 			class="tribe-events-calendar-list__event-datetime-featured-icon tribe-common-svgicon tribe-common-svgicon--featured"
-			aria-label="<?php esc_attr_e( 'Featured', 'nightingale' ); ?>"
-			title="<?php esc_attr_e( 'Featured', 'nightingale' ); ?>"
+			aria-label="<?php esc_attr_e( 'Featured', NHSUK_DOMAIN_NAME ); ?>"
+			title="<?php esc_attr_e( 'Featured', NHSUK_DOMAIN_NAME ); ?>"
 		>
 		</em>
 		<span class="tribe-events-calendar-list__event-datetime-featured-text tribe-common-a11y-visual-hide">
-			<?php esc_html_e( 'Featured', 'nightingale' ); ?>
+			<?php esc_html_e( 'Featured', NHSUK_DOMAIN_NAME ); ?>
 		</span>
 	<?php endif; ?>
 	<time class="tribe-events-calendar-list__event-datetime" datetime="<?php echo esc_attr( $event_date_attr ); ?>">

@@ -36,7 +36,7 @@ if ( empty( $disable_event_search ) ) {
 	<?php endif; ?>
 >
 	<div class="tribe-common-l-container tribe-events-l-container">
-		<?php $this->template( 'components/loader', [ 'text' => __( 'Loading...', 'nightingale' ) ] ); ?>
+		<?php $this->template( 'components/loader', [ 'text' => __( 'Loading...', NHSUK_DOMAIN_NAME ) ] ); ?>
 
 		<?php $this->template( 'components/json-ld-data' ); ?>
 

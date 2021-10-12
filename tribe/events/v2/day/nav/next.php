@@ -16,9 +16,9 @@
 		rel="next"
 		class="tribe-events-c-nav__next tribe-common-b2 tribe-common-b1--min-medium"
 		data-js="tribe-events-view-link"
-		aria-label="<?php esc_attr_e( 'Next Day', 'nightingale' ); ?>"
-		title="<?php esc_attr_e( 'Next Day', 'nightingale' ); ?>"
+		aria-label="<?php esc_attr_e( 'Next Day', NHSUK_DOMAIN_NAME ); ?>"
+		title="<?php esc_attr_e( 'Next Day', NHSUK_DOMAIN_NAME ); ?>"
 	>
-		<?php esc_html_e( 'Next Day', 'nightingale' ); ?>
+		<?php esc_html_e( 'Next Day', NHSUK_DOMAIN_NAME ); ?>
 	</a>
 </li>

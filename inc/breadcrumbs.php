@@ -87,12 +87,12 @@ function nightingale_breadcrumb() {
 		$breadcrumbs = uo_breadcrumbs( false );
 	} else {
 		list( $trail, $back_one_level ) = nightingale_breadcrumb_trail();
-		$back_one_level                 = empty( $back_one_level ) ? array( esc_url( home_url() ), __( 'Home', 'nightingale' ) ) : $back_one_level;
+		$back_one_level                 = empty( $back_one_level ) ? array( esc_url( home_url() ), __( 'Home', NHSUK_DOMAIN_NAME ) ) : $back_one_level;
 		$breadcrumbs                    = sprintf(
 			'<ol class="nhsuk-breadcrumb__list"><li class="nhsuk-breadcrumb__item"><a href="%2$s">%3$s</a></li>%1$s</ol>',
 			$trail,
 			esc_url( home_url() ),
-			esc_html( __( 'Home', 'nightingale' ) )
+			esc_html( __( 'Home', NHSUK_DOMAIN_NAME ) )
 		);
 	}
 	ob_start();
@@ -122,7 +122,7 @@ function nightingale_breadcrumb() {
 			'<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb"><div class="nhsuk-width-container">%1$s <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="%2$s"> %3$s %4$s</a></p></div></nav>',
 			$breadcrumbs, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			esc_url( $back_one_level[0] ),
-			esc_html( 'Back to ', 'nightingale' ),
+			esc_html( 'Back to ', NHSUK_DOMAIN_NAME ),
 			esc_html( $back_one_level[1] )
 		);
 	}
@@ -139,7 +139,7 @@ function nightingale_breadcrumb() {
  */
 function nightingale_breadcrumb_trail() {
 	global $wp_query;
-	$back_one_level = empty( $back_one_level ) ? array( esc_url( home_url() ), __( 'Home', 'nightingale' ) ) : $back_one_level;
+	$back_one_level = empty( $back_one_level ) ? array( esc_url( home_url() ), __( 'Home', NHSUK_DOMAIN_NAME ) ) : $back_one_level;
 	$trail          = '';
 	if ( is_category() ) {
 		$cat_obj    = $wp_query->get_queried_object();
@@ -155,11 +155,11 @@ function nightingale_breadcrumb_trail() {
 	} elseif ( is_post_type_archive( 'tribe_events' ) ) {
 		$trail = '<li class="nhsuk-breadcrumb__item">' . esc_html( tribe_get_event_label_plural() ) . '</li>';
 	} elseif ( is_archive() && ! is_category() ) {
-		$trail = '<li class="nhsuk-breadcrumb__item">' . esc_html( 'Archives', 'nightingale' ) . '</li>';
+		$trail = '<li class="nhsuk-breadcrumb__item">' . esc_html( 'Archives', NHSUK_DOMAIN_NAME ) . '</li>';
 	} elseif ( is_search() ) {
-		$trail = '<li class="nhsuk-breadcrumb__item">' . esc_html( 'Search Results', 'nightingale' ) . '</li>';
+		$trail = '<li class="nhsuk-breadcrumb__item">' . esc_html( 'Search Results', NHSUK_DOMAIN_NAME ) . '</li>';
 	} elseif ( is_404() ) {
-		$trail = '<li class="nhsuk-breadcrumb__item">' . esc_html( '404 Not Found', 'nightingale' ) . '</li>';
+		$trail = '<li class="nhsuk-breadcrumb__item">' . esc_html( '404 Not Found', NHSUK_DOMAIN_NAME ) . '</li>';
 	} elseif ( is_singular( 'post' ) ) {
 		$category    = get_the_category();
 		$category_id = get_cat_ID( $category[0]->cat_name );

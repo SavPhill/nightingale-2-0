@@ -1,8 +1,11 @@
 @charset "UTF-8";
+$nhsuk_theme_name: 'Nightingale';
+$nhsuk_domain_name: 'nightingale';
+$nhsuk_theme_version: '2.3.4';
 /*
-Theme Name: Nightingale
-Text Domain: nightingale
-Version: 2.3.3
+Theme Name: #{$nhsuk_theme_name}
+Text Domain: #{$nhsuk_domain_name}
+Version: #{$nhsuk_theme_version}
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 5.2.4

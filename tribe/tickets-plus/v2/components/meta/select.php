@@ -46,7 +46,7 @@ $classes[] = 'nhsuk-form-group';
 		name="<?php echo esc_attr( $field_name ); ?>"
 		<?php tribe_required( $required ); ?>
 	>
-		<option value=""><?php esc_html_e( 'Select an option', 'nightingale' ); ?></option>
+		<option value=""><?php esc_html_e( 'Select an option', NHSUK_DOMAIN_NAME ); ?></option>
 		<?php foreach ( $options as $option => $label ) : ?>
 			<option
 				<?php selected( $label, $value ); ?> value="<?php echo esc_attr( $label ); ?>"><?php echo esc_html( $label ); ?></option>

@@ -25,6 +25,6 @@
 		data-js="tribe-events-view-link"
 >
 	<?php
-	esc_html_e( 'Show all events', 'nightingale' );
+	esc_html_e( 'Show all events', NHSUK_DOMAIN_NAME );
 	?>
 </a>

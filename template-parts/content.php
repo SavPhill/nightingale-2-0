@@ -28,7 +28,7 @@
 				$readmorelink  = esc_url( get_permalink() );
 				$readmoretitle = esc_html( get_the_title() );
 				if ( strlen( $readmoretitle ) < 1 ) {
-					$readmoretitle = esc_html__( 'this post', 'nightingale' );
+					$readmoretitle = esc_html__( 'this post', NHSUK_DOMAIN_NAME );
 					echo '<div class="nhsuk-readmore">' . nightingale_read_more_posts( $readmoretitle, $readmorelink ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 				?>
@@ -58,14 +58,14 @@
 		}
 
 		$defaults = array(
-			'before'           => '<p>' . __( 'Pages:', 'nightingale' ),
+			'before'           => '<p>' . __( 'Pages:', NHSUK_DOMAIN_NAME ),
 			'after'            => '</p>',
 			'link_before'      => '',
 			'link_after'       => '',
 			'next_or_number'   => 'number',
 			'separator'        => ' ',
-			'nextpagelink'     => __( 'Next page', 'nightingale' ),
-			'previouspagelink' => __( 'Previous page', 'nightingale' ),
+			'nextpagelink'     => __( 'Next page', NHSUK_DOMAIN_NAME ),
+			'previouspagelink' => __( 'Previous page', NHSUK_DOMAIN_NAME ),
 			'pagelink'         => '%',
 			'echo'             => 1,
 		);

@@ -41,7 +41,7 @@ if ( isset( $shortcode_atts['course_id'] ) ) {
 
 $button_link = apply_filters( 'learndash_course_grid_custom_button_link', $button_link, $course_id );
 
-$button_text = isset( $button_text ) && ! empty( $button_text ) ? $button_text : __( 'Explore ', 'nightingale' );
+$button_text = isset( $button_text ) && ! empty( $button_text ) ? $button_text : __( 'Explore ', NHSUK_DOMAIN_NAME );
 $button_text = apply_filters( 'learndash_course_grid_custom_button_text', $button_text, $course_id );
 
 $options          = get_option( 'sfwd_cpt_options' );
@@ -77,7 +77,7 @@ if ( function_exists( 'learndash_get_course_price' ) ) {
 	$price      = $price_args['price'];
 	$price_type = $price_args['type'];
 } else {
-	$price      = $course_options && isset( $course_options['sfwd-courses_course_price'] ) ? $course_options['sfwd-courses_course_price'] : __( 'Free', 'nightingale' );
+	$price      = $course_options && isset( $course_options['sfwd-courses_course_price'] ) ? $course_options['sfwd-courses_course_price'] : __( 'Free', NHSUK_DOMAIN_NAME );
 	$price_type = $course_options && isset( $course_options['sfwd-courses_course_price_type'] ) ? $course_options['sfwd-courses_course_price_type'] : '';
 }
 
@@ -111,7 +111,7 @@ if ( is_numeric( $price ) && ! empty( $price ) ) {
 } elseif ( is_string( $price ) && ! empty( $price ) ) {
 	$price_text = $price;
 } elseif ( empty( $price ) ) {
-	$price_text = __( 'Free', 'nightingale' );
+	$price_text = __( 'Free', NHSUK_DOMAIN_NAME );
 }
 
 $class        = 'ld_course_grid_price';
@@ -122,20 +122,20 @@ $ribbon_text  = isset( $ribbon_text ) && ! empty( $ribbon_text ) ? $ribbon_text 
 if ( $has_access && ! $is_completed && 'open' !== $price_type && empty( $ribbon_text ) ) {
 	$class        .= ' ribbon-enrolled';
 	$course_class .= ' learndash-available learndash-incomplete	';
-	$ribbon_text   = __( 'Enrolled', 'nightingale' );
+	$ribbon_text   = __( 'Enrolled', NHSUK_DOMAIN_NAME );
 } elseif ( $has_access && $is_completed && 'open' !== $price_type && empty( $ribbon_text ) ) {
 	$class        .= '';
 	$course_class .= ' learndash-available learndash-complete';
-	$ribbon_text   = __( 'Completed', 'nightingale' );
+	$ribbon_text   = __( 'Completed', NHSUK_DOMAIN_NAME );
 } elseif ( 'open' === $price_type && empty( $ribbon_text ) ) {
 	if ( is_user_logged_in() && ! $is_completed ) {
 		$class        .= ' ribbon-enrolled';
 		$course_class .= ' learndash-available learndash-incomplete';
-		$ribbon_text   = __( 'Enrolled', 'nightingale' );
+		$ribbon_text   = __( 'Enrolled', NHSUK_DOMAIN_NAME );
 	} elseif ( is_user_logged_in() && $is_completed ) {
 		$class        .= '';
 		$course_class .= ' learndash-available learndash-complete';
-		$ribbon_text   = __( 'Completed', 'nightingale' );
+		$ribbon_text   = __( 'Completed', NHSUK_DOMAIN_NAME );
 	} else {
 		$course_class .= ' learndash-available';
 		$class        .= ' ribbon-enrolled';

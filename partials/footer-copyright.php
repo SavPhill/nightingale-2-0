@@ -13,7 +13,7 @@ $organisation_name = get_theme_mod( 'org_name_field', '' );
 
 ?>
 <p class="nhsuk-footer__copyright">
-	<?php echo esc_html__( '&copy; Copyright', 'nightingale' ); ?>,
+	<?php echo esc_html__( '&copy; Copyright', NHSUK_DOMAIN_NAME ); ?>,
 	<?php
 	if ( '' !== $organisation_name ) {
 		echo esc_html( $organisation_name );
@@ -21,5 +21,5 @@ $organisation_name = get_theme_mod( 'org_name_field', '' );
 		bloginfo( 'name' );
 	}
 	?>
-	<?php echo esc_html( date_i18n( __( 'Y', 'nightingale' ) ) ); ?>
+	<?php echo esc_html( date_i18n( __( 'Y', NHSUK_DOMAIN_NAME ) ) ); ?>
 </p>
